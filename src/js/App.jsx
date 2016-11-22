@@ -9,25 +9,17 @@ var App = React.createClass({ getInitialState: function () {
 },
 render: function () {
 	var texto = "Turno del " + this.state.turno;
-	var htmltablero = [];
-	for (var i = 0; i < this.state.valores.length; i++) {
-		//this.state.valores[i] contiene el array de la fila
-		var htmlfila = [];
-		for (var a = 0; a < this.state.valores[i].length; a++) {
-        	//this.state.valores[i][a] contiene la casilla
-			htmlfila.push(<span>{this.state.valores[i][a]}</span>); 
-		}
-		htmltablero.push(<div>{htmlfila}</div>); 
-	}
-	return (
-       	<div>
-       		<header class="cabecera">
-    			{texto}
-			</header>
-			{htmltablero} 
-		</div>	
+	let htmltablero = this.state.valores.map(function (valoresFila, indiceFila) { 
+		let fila = valoresFila.map(function (valor, indiceColumna) {
+        return (
+            <span>{valor}</span>
+		) 
+	});
+    return (
+        <div>
+			{fila} 
+		</div>
 	) 
-}
 });
 
 module.exports = App;
