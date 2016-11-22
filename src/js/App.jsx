@@ -1,7 +1,13 @@
-const Cabecera = require('./Cabecera.jsx'); const Tablero = require('./Tablero.jsx');
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+const Cabecera = require('./Cabecera.jsx'); 
+const Tablero = require('./Tablero.jsx');
+
 const JUGADORX = "jugador 1 - las X";
 const JUGADOR0 = "jugador 2 - los 0";
 const VALORES = [['-', '-', '-'], ['-', '-', '-'], ['-', '-', '-']];
+
 var App = React.createClass({ 
 	getInitialState: function () {
         return {
