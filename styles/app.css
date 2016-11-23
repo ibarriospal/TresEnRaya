@@ -1,8 +1,14 @@
-.game {
-  float: left;
+body {
+	text-align: center;
 }
+.game {
+	float: left;
+	display: inline-block;
+	width: 100%;
+}
+
 .logo {
-  float: left;
-  width: 100px;
-  margin-left: 50px;
+	float: left;
+	width: 100px;
+	margin-left: 50px;
 }
